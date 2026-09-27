@@ -1,0 +1,235 @@
+<mxfile host="65bd71144e">
+    <diagram id="TO-BE-Aplicaciones-Ban100-diagram" name="TO-BE-Aplicaciones-Ban100">
+        <mxGraphModel dx="512" dy="417" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="act_cliente" parent="1" style="shape=umlActor;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#333333;verticalLabelPosition=bottom;verticalAlign=top;" value="Pensionado / Solicitante" vertex="1">
+                    <mxGeometry height="70" width="110" x="70" y="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_asesor" parent="1" style="shape=umlActor;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#333333;verticalLabelPosition=bottom;verticalAlign=top;" value="Asesor Comercial" vertex="1">
+                    <mxGeometry height="70" width="110" x="70" y="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="cnt_app" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#DCEBFC;strokeColor=#2E6295;fontColor=#10253F;dashed=0;" value="App Móvil Ban100 [Contenedor existente]" vertex="1">
+                    <mxGeometry height="70" width="190" x="240" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="cnt_web" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#DCEBFC;strokeColor=#2E6295;fontColor=#10253F;dashed=0;" value="Portal Web Ban100 [Contenedor existente]" vertex="1">
+                    <mxGeometry height="70" width="190" x="240" y="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="cnt_asesor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#DCEBFC;strokeColor=#2E6295;fontColor=#10253F;dashed=0;" value="Portal Asesor Comercial [Contenedor existente]" vertex="1">
+                    <mxGeometry height="70" width="190" x="240" y="460" as="geometry"/>
+                </mxCell>
+                <mxCell id="lkAR8YOak4tLppzBi-5E-7" edge="1" parent="1" source="cnt_gw" style="edgeStyle=none;html=1;" target="cnt_arco" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="cnt_gw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#DCEBFC;strokeColor=#2E6295;fontColor=#10253F;dashed=0;" value="API Gateway (CSP + Rate Limiting) [Existente, reforzado H1]" vertex="1">
+                    <mxGeometry height="80" width="210" x="500" y="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="cnt_arco" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="Módulo Privacidad y Derechos ARCO (cnt_arco)" vertex="1">
+                    <mxGeometry height="75" width="210" x="500" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="cnt_fido" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="Servidor FIDO2 / WebAuthn (cnt_fido)" vertex="1">
+                    <mxGeometry height="75" width="200" x="760" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="ms_orig" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#DCEBFC;strokeColor=#2E6295;fontColor=#10253F;dashed=0;" value="MS Originación (Zero Trust) [Existente, reforzado H2]" vertex="1">
+                    <mxGeometry height="80" width="200" x="770" y="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="lkAR8YOak4tLppzBi-5E-4" edge="1" parent="1" source="ms_pagad" style="edgeStyle=none;html=1;" target="x_deceval" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ms_pagad" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#DCEBFC;strokeColor=#2E6295;fontColor=#10253F;dashed=0;" value="MS Pagadurías (con DDM) [Existente, reforzado H2]" vertex="1">
+                    <mxGeometry height="80" width="200" x="1030" y="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="ms_mdm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#DCEBFC;strokeColor=#2E6295;fontColor=#10253F;dashed=0;" value="MDM (Datos Maestros) [Contenedor existente]" vertex="1">
+                    <mxGeometry height="70" width="190" x="500" y="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="cnt_ms_cdc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="&amp;nbsp;Pipeline CDC Debezium ➔ Kafka (ms_cdc)" vertex="1">
+                    <mxGeometry height="75" width="200" x="770" y="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="core_bancario" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#DCEBFC;strokeColor=#2E6295;fontColor=#10253F;dashed=0;" value="Core Bancario Estrangulado (K8s) [Existente, en migración H3]" vertex="1">
+                    <mxGeometry height="85" width="220" x="500" y="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="db_core" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D6EAF8;strokeColor=#2E6295;boundedLbl=1;" value="DB Core (con DDM/TDE)" vertex="1">
+                    <mxGeometry height="80" width="160" x="780" y="425" as="geometry"/>
+                </mxCell>
+                <mxCell id="ms_breb_bog" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#DCEBFC;strokeColor=#2E6295;fontColor=#10253F;dashed=0;" value="MS Bre-B — Bogotá (Activo) [Existente, reforzado H3]" vertex="1">
+                    <mxGeometry height="80" width="200" x="500" y="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="lkAR8YOak4tLppzBi-5E-3" edge="1" parent="1" style="edgeStyle=none;html=1;" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="890" y="560" as="sourcePoint"/>
+                        <mxPoint x="890" y="505" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="cnt_ms_breb_med" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="MS Bre-B — Medellín (Réplica Activa, MirrorMaker 2)" vertex="1">
+                    <mxGeometry height="80" width="200" x="760" y="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="cnt_db_worm" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;boundedLbl=1;" value="Repositorio WORM Inmutable (db_worm)" vertex="1">
+                    <mxGeometry height="85" width="170" x="1030" y="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="lkAR8YOak4tLppzBi-5E-2" edge="1" parent="1" source="cnt_db_ttl" style="edgeStyle=none;html=1;" target="cnt_db_worm" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="cnt_db_ttl" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;boundedLbl=1;" value="Bucket TTL 30d Biometría desistida (db_ttl)" vertex="1">
+                    <mxGeometry height="85" width="170" x="1030" y="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_banrep" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F2F3F4;strokeColor=#616A6B;fontColor=#333333;dashed=0;" value="Banco de la República (Bre-B)" vertex="1">
+                    <mxGeometry height="75" width="190" x="1280" y="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_deceval" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F2F3F4;strokeColor=#616A6B;fontColor=#333333;dashed=0;" value="DECEVAL (Custodia Pagarés)" vertex="1">
+                    <mxGeometry height="75" width="190" x="1280" y="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_rnec" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F2F3F4;strokeColor=#616A6B;fontColor=#333333;dashed=0;" value="RNEC (Validación cruzada)" vertex="1">
+                    <mxGeometry height="75" width="190" x="1280" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_sic" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F2F3F4;strokeColor=#616A6B;fontColor=#333333;dashed=0;" value="RNBD — SIC" vertex="1">
+                    <mxGeometry height="75" width="190" x="1280" y="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" edge="1" parent="1" source="act_cliente" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="cnt_app" value="usa">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="220" y="415"/>
+                            <mxPoint x="220" y="155"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e3" edge="1" parent="1" source="act_asesor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="cnt_asesor" value="usa">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" edge="1" parent="1" source="cnt_app" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="cnt_gw" value="HTTPS + mTLS">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5" edge="1" parent="1" source="cnt_web" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="cnt_gw" value="HTTPS">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e6" edge="1" parent="1" source="cnt_asesor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="cnt_gw" value="HTTPS">
+                    <mxGeometry relative="1" x="-0.8537" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="410" y="290"/>
+                            <mxPoint x="605" y="290"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e7" edge="1" parent="1" source="cnt_app" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="cnt_arco" value="consulta/revoca consentimiento">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="570" y="140.03"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e8" edge="1" parent="1" source="cnt_arco" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="ms_mdm" value="orquesta">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="140" y="77.48"/>
+                            <mxPoint x="140" y="340.03"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e9" edge="1" parent="1" source="cnt_gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="cnt_fido" value="verifica desafío FIDO2">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="750" y="180.03"/>
+                            <mxPoint x="750" y="77.48"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e10" edge="1" parent="1" source="cnt_gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="ms_orig" value="orquesta crédito">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e11" edge="1" parent="1" source="ms_orig" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="ms_pagad" value="consulta cupo (datos con DDM)">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e12" edge="1" parent="1" source="ms_orig" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="core_bancario" value="genera obligación">
+                    <mxGeometry relative="1" x="0.6436" y="10" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="870" y="270.03"/>
+                            <mxPoint x="450" y="270.03"/>
+                            <mxPoint x="450" y="462.52"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e13" edge="1" parent="1" source="core_bancario" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="db_core" value="lee/escribe">
+                    <mxGeometry relative="1" x="-0.2272" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="610" y="510.03"/>
+                            <mxPoint x="760" y="510.03"/>
+                            <mxPoint x="760" y="465"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e14" edge="1" parent="1" source="db_core" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="cnt_ms_cdc" value="WAL streaming">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e15" edge="1" parent="1" source="cnt_ms_cdc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="ms_mdm" value="alimenta en tiempo real">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e16" edge="1" parent="1" source="ms_orig" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="ms_breb_bog" value="ordena desembolso ISO 20022">
+                    <mxGeometry relative="1" x="-0.1365" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="740" y="230"/>
+                            <mxPoint x="740" y="600"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e17" edge="1" parent="1" source="ms_breb_bog" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="cnt_ms_breb_med" value="MirrorMaker 2 (RTO&lt;1s, RPO=0)">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="580" y="530"/>
+                            <mxPoint x="860" y="530"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e18" edge="1" parent="1" source="ms_breb_bog" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="x_banrep" value="pacs.008 firmado XML-DSig + mTLS">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="600" y="700"/>
+                            <mxPoint x="1375" y="700"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e19" edge="1" parent="1" source="ms_breb_bog" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="cnt_db_worm" value="traza inmutable SHA-256">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="640" y="650"/>
+                            <mxPoint x="1250" y="650"/>
+                            <mxPoint x="1250" y="342.5"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e20" edge="1" parent="1" source="ms_orig" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="x_deceval" value="radica pagaré desmaterializado">
+                    <mxGeometry relative="1" x="0.2087" y="10" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="870" y="150.03"/>
+                            <mxPoint x="1375.03" y="150.03"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e21" edge="1" parent="1" source="cnt_fido" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="x_rnec" value="valida OTP cruzado">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e22" edge="1" parent="1" source="cnt_arco" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="x_sic" value="actualiza inventario RNBD">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="605" y="30"/>
+                            <mxPoint x="1490" y="30"/>
+                            <mxPoint x="1490" y="337.5"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e23" edge="1" parent="1" source="cnt_fido" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="cnt_db_ttl" value="purga biometría desistida (30d)">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1010" y="100"/>
+                            <mxPoint x="1010" y="462.5"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

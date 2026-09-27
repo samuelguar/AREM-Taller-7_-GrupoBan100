@@ -1,0 +1,200 @@
+<mxfile host="65bd71144e">
+    <diagram id="TO-BE-Tecnologia-Ban100-diagram" name="TO-BE-Tecnologia-Ban100">
+        <mxGraphModel dx="1280" dy="1043" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="zona_bog" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=13;fillColor=#FDF2E3;strokeColor=#CC6600;fontColor=#333333;dashed=1;" value="Zona Bogotá — Sede Principal" vertex="1">
+                    <mxGeometry height="720" width="720" x="40" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="zona_med" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=13;fillColor=#EAF2FB;strokeColor=#2E6295;fontColor=#333333;dashed=1;" value="Zona Medellín — DRP / Región Secundaria" vertex="1">
+                    <mxGeometry height="720" width="720" x="820" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="z1_cdn" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="CDN / WAF (CSP, HSTS, X-Frame-Options)&amp;nbsp; resuelve NOR-06" vertex="1">
+                    <mxGeometry height="75" width="260" x="80" y="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="z2_3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="&amp;nbsp;Balanceador Global Activo-Activo (Anycast DNS) resuelve INF-03" vertex="1">
+                    <mxGeometry height="80" width="260" x="80" y="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="z2_gw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="API Gateway (Rate Limiting)&amp;nbsp; resuelve STR-05" vertex="1">
+                    <mxGeometry height="80" width="260" x="380" y="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="z3_8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="Core Bancario Estrangulado (K8s) resuelve INF-01" vertex="1">
+                    <mxGeometry height="80" width="260" x="80" y="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="z3_cdc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="&amp;nbsp;Pipeline CDC Streaming (Debezium/Kafka) resuelve INF-02" vertex="1">
+                    <mxGeometry height="80" width="260" x="380" y="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="z3_db" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D6EAF8;strokeColor=#2E6295;boundedLbl=1;" value="BD Core (TDE + DDM)" vertex="1">
+                    <mxGeometry height="80" width="180" x="80" y="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="z3_breb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#DCEBFC;strokeColor=#2E6295;fontColor=#10253F;dashed=0;" value="MS Bre-B Bogotá (Activo) [Existente]" vertex="1">
+                    <mxGeometry height="80" width="220" x="300" y="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="z3_worm" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;boundedLbl=1;" value="Repositorio WORM (SHA-256)" vertex="1">
+                    <mxGeometry height="80" width="170" x="550" y="410" as="geometry"/>
+                </mxCell>
+                <mxCell id="z1_office" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#DCEBFC;strokeColor=#2E6295;fontColor=#10253F;dashed=0;" value="Puestos de Trabajo Asesores Comerciales" vertex="1">
+                    <mxGeometry height="75" width="260" x="80" y="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="z6_dlp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="&amp;nbsp;Agente Endpoint DLP (bloqueo USB, watermark) resuelve NOR-05" vertex="1">
+                    <mxGeometry height="75" width="260" x="380" y="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="z_ttl" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;boundedLbl=1;" value="Bucket TTL 30d (Biometría desistida)&amp;nbsp; resuelve NOR-07" vertex="1">
+                    <mxGeometry height="85" width="220" x="80" y="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="z_fido" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="Servidor FIDO2/WebAuthn&amp;nbsp; resuelve STR-01" vertex="1">
+                    <mxGeometry height="85" width="240" x="340" y="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="z4_lb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="Balanceador Secundario (participa en Anycast)" vertex="1">
+                    <mxGeometry height="75" width="260" x="860" y="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="z4_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="&amp;nbsp;Kubernetes Federation (KubeFed) — paridad total resuelve INF-05" vertex="1">
+                    <mxGeometry height="80" width="260" x="860" y="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="z4_orig" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="MS Originación/Captación (réplica completa)&amp;nbsp; antes solo consulta" vertex="1">
+                    <mxGeometry height="80" width="260" x="1160" y="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="z4_db" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D6EAF8;strokeColor=#2E6295;boundedLbl=1;" value="BD Core — Réplica (TDE + DDM)" vertex="1">
+                    <mxGeometry height="80" width="200" x="860" y="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="z4_3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="MS Bre-B Medellín (Activo, MirrorMaker 2, RTO&amp;lt;1s / RPO=0) resuelve INF-04" vertex="1">
+                    <mxGeometry height="90" width="260" x="1120" y="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="z4_soc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#DCEBFC;strokeColor=#2E6295;fontColor=#10253F;dashed=0;" value="Centro de Operaciones de Seguridad (SOC/SIEM)" vertex="1">
+                    <mxGeometry height="80" width="260" x="860" y="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_banrep2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F2F3F4;strokeColor=#616A6B;fontColor=#333333;dashed=0;" value="Banco de la República (Cámara de Compensación)" vertex="1">
+                    <mxGeometry height="75" width="260" x="1160" y="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_sic2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="SIC — RNBD&amp;nbsp; resuelve NOR-03" vertex="1">
+                    <mxGeometry height="75" width="240" x="860" y="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_rnec2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D5F5E3;strokeColor=#1E8449;fontColor=#0B5345;dashed=0;" value="RNEC (validación cruzada llaves)&amp;nbsp; resuelve STR-07" vertex="1">
+                    <mxGeometry height="75" width="260" x="1120" y="620" as="geometry"/>
+                </mxCell>
+                <mxCell id="f1" edge="1" parent="1" source="z1_cdn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="z2_3" value="tráfico filtrado">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="f2" edge="1" parent="1" source="z2_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="z2_gw" value="enruta">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="f3" edge="1" parent="1" source="z2_gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="z3_8" value="orquesta">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="470" y="280"/>
+                            <mxPoint x="210" y="280"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f4" edge="1" parent="1" source="z3_8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="z3_db" value="lee/escribe">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="f5" edge="1" parent="1" source="z3_db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="z3_cdc" value="WAL streaming">
+                    <mxGeometry relative="1" x="-0.451" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="170" y="500"/>
+                            <mxPoint x="530" y="500"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f6" edge="1" parent="1" source="z3_8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="z3_breb" value="ordena desembolso">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="250" y="395"/>
+                            <mxPoint x="410" y="395"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f7" edge="1" parent="1" source="z3_breb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="z3_worm" value="traza inmutable">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="f8" edge="1" parent="1" source="z1_office" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="z6_dlp" value="monitorea/ bloquea">
+                    <mxGeometry relative="1" y="-12" as="geometry">
+                        <mxPoint y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f9" edge="1" parent="1" source="z2_gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="z_fido" value="verifica desafío">
+                    <mxGeometry relative="1" x="-0.2588" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="510" y="290"/>
+                            <mxPoint x="740" y="290"/>
+                            <mxPoint x="740" y="662.5"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f10" edge="1" parent="1" source="z_fido" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="z_ttl" value="purga TTL 30d">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="f11" edge="1" parent="1" source="z4_lb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="z4_2" value="enruta réplica">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="f12" edge="1" parent="1" source="z4_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="z4_orig" value="aloja">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="f13" edge="1" parent="1" source="z4_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="z4_db" value="lee/escribe">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="f14" edge="1" parent="1" source="z4_db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="z4_3" value="sincroniza">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="f15" edge="1" parent="1" source="z4_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="x_banrep2" value="liquida pacs.008">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1290" y="420"/>
+                            <mxPoint x="1290" y="420"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="f16" edge="1" parent="1" source="z4_soc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#666666;dashed=0;endArrow=block;" target="x_sic2" value="reporta">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="f17" edge="1" parent="1" source="z_fido" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#1E8449;dashed=0;endArrow=block;" target="x_rnec2" value="valida OTP cruzado">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="460" y="730"/>
+                            <mxPoint x="1250" y="730"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="g1" edge="1" parent="1" source="z2_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#CC0000;dashed=1;endArrow=block;" target="z4_lb" value="Anycast DNS failover &lt; 30s">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="270" y="180"/>
+                            <mxPoint x="940" y="180"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="g2" edge="1" parent="1" source="z3_db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#CC0000;dashed=1;endArrow=block;exitX=0.855;exitY=0;exitDx=0;exitDy=4.35;exitPerimeter=0;" target="z4_db" value="réplica geo-distribuida">
+                    <mxGeometry relative="1" x="0.5006" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="240" y="414.43"/>
+                            <mxPoint x="240" y="399.91"/>
+                            <mxPoint x="960" y="399.91"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="g3" edge="1" parent="1" source="z3_breb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#CC0000;dashed=1;endArrow=block;" target="z4_3" value="MirrorMaker 2 RTO&lt;1s / RPO=0">
+                    <mxGeometry relative="1" x="-0.1837" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="410" y="509.94"/>
+                            <mxPoint x="1250" y="509.94"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="g4" edge="1" parent="1" source="z3_worm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;strokeColor=#CC0000;dashed=1;endArrow=block;" target="z4_soc" value="streaming SIEM">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="750" y="460"/>
+                            <mxPoint x="750" y="460"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
